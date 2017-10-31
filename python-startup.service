@@ -1,0 +1,16 @@
+[Unit]
+    Description=Run Python Start
+
+    [Service]
+    ExecStart=/home/simaopgt/desafio-di/startup
+    ReadWriteDirectories=/home/simaopgt/desafio-di/
+    WorkingDirectory=/home/simaopgt/desafio-di/
+    Restart=always
+    RestartSec=10                                          
+    SyslogIdentifier=python_startup
+    User=simaopgt
+    Environment=http://ec2-13-58-186-167.us-east-2.compute.amazonaws.com:50004 
+
+    [Install]
+    WantedBy=multi-user.target
+
